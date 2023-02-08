@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Creating Fixed Header and Footer with CSS</title>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+
+    }
+    .fixed-header
+    {
+      width: 100%;     
+      position: fixed;   
+        
+        color:red;
+        text-align: center;
+    }
+     .fixed-footer{
+
+color: red;
+width:100%;
+padding: 5px;
+margin-top: 20px;
+position: fixed;
+text-align: center;
+border: .1em solid black;
+}
+img{
+    height: 20vh;
+    width: 100px;
+    padding: 10px;
+    border: 5px  dotted red;
+    margin: 28px;
+    object-fit: cover;
+}
+    
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: red;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+        border: .1em solid black;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+    
+@media screen and (min-width: 220px) {
+    body {
+      background-color: pink;
+    }
+          }
+          @media screen and (min-width: 560px) {
+          body {
+            background-color: pink(40, 28, 217);
+          }
+        }
+        @media screen and (min-width: 780px) {
+    body {
+      background-color: pink(255, 255, 0);
+    }
+          }
+</style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact us.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+    <div class='img'>
+      <img src="product02.png" >
+      <img src="dress_shirt_PNG.png" >
+      <img src="product03.png" >
+      <img src="product04.png" >
+      <img src="product05.png" >
+      <img src="product06.png" >
+      <img src="product08.png" >
+
+
+  </div>
+    <div class="container">
+    	<p>.</p>
+        <p></p>
+    </div> 
+     
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2023 Online Store</div>        
+    </div>
+</body>
+</html>
